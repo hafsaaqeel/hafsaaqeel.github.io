@@ -9326,8 +9326,8 @@ figcaption {
       -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
       transform: translateX(-50%);
-      background: var(--background-color-1);
-      box-shadow: var(--shadow-1);
+      /* background: var(--background-color-1); */
+      /* box-shadow: var(--shadow-1); */
       border-radius: 6px; }
     .slide .thumbnail .inner {
       text-align: center; }
