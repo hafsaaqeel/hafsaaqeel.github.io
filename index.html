@@ -123,6 +123,10 @@
   .job .role-co{color:var(--muted);font-size:14px;margin-bottom:12px}
   .job p{font-size:14.5px;color:var(--muted)}
   .job p b{color:var(--ink);font-weight:500}
+  .job ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+  .job li{position:relative;padding-left:20px;font-size:14px;color:var(--muted);line-height:1.5}
+  .job li::before{content:"✓";position:absolute;left:0;color:var(--pass);font-size:12px}
+  .job li b{color:var(--ink);font-weight:500}
 
   /* portfolio grid */
   .port-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -379,7 +383,14 @@
       <div>
         <h3>QA Engineer, Working Student</h3>
         <div class="role-co">Hawk AI GmbH</div>
-      <p>Testing end-to-end and UI flows of the FinTech product using <b>Playwright</b> and <b>Gradle</b>, reviewing code and handling daily alerts across teams, and maintaining <b>CI/CD</b> pipelines with <b>GitHub Actions</b>. Analyze failures with <b>Allure Reports</b>, run exploratory testing on high-risk areas before delivery, and integrate <b>AI tools (Claude, Gemini)</b> to work more efficiently, tracking daily tasks on the <b>Jira</b> Kanban board with <b>Confluence</b> documentation.</p>
+        <ul>
+          <li>Test end-to-end and UI flows of the FinTech product with <b>Playwright</b> and <b>Gradle</b>.</li>
+          <li>Maintain <b>CI/CD</b> pipelines in <b>GitHub Actions</b> and analyze failures with <b>Allure Reports</b>.</li>
+          <li>Run <b>exploratory testing</b> on high-risk areas before customer delivery.</li>
+          <li>Review code and handle daily alerts across teams.</li>
+          <li>Use <b>AI tools (Claude, Gemini)</b> to speed up testing work.</li>
+          <li>Track daily tasks on the <b>Jira</b> Kanban board, documented in <b>Confluence</b>.</li>
+        </ul>
       </div>
     </div>
     <div class="job reveal">
@@ -390,7 +401,12 @@
       <div>
         <h3>Quality Assurance Consultant</h3>
         <div class="role-co">Systems Limited</div>
-        <p>Initiated a <b>Cypress</b> automation framework for UI &amp; API coverage, designed and executed test cases with <b>Postman</b> and <b>SQL</b> database validation, and ran <b>smoke &amp; regression</b> testing across UAT and production, collaborating through <b>JIRA</b> and <b>Jenkins</b>.</p>
+        <ul>
+          <li>Initiated a <b>Cypress</b> automation framework for UI &amp; API coverage.</li>
+          <li>Designed and executed test cases with <b>Postman</b> and <b>SQL</b> database validation.</li>
+          <li>Ran <b>smoke &amp; regression</b> testing across UAT and production.</li>
+          <li>Collaborated through <b>JIRA</b> and <b>Jenkins</b> for tracking and CI.</li>
+        </ul>
       </div>
     </div>
   </div>
