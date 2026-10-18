@@ -138,6 +138,9 @@
   .card h3{font-family:var(--display);font-size:17px;font-weight:600;margin-bottom:4px}
   .card .c-affil{font-family:var(--mono);font-size:11px;color:var(--dim);margin-bottom:10px}
   .card p{font-size:13.5px;color:var(--muted);margin-bottom:16px;flex:1}
+  .card ul{list-style:none;margin:0 0 16px;padding:0;flex:1;display:flex;flex-direction:column;gap:7px}
+  .card li{position:relative;padding-left:16px;font-size:13px;color:var(--muted);line-height:1.5}
+  .card li::before{content:"▹";position:absolute;left:0;color:var(--pass);font-size:11px}
   .card .c-link{font-family:var(--mono);font-size:12px;color:var(--pass);
     display:inline-flex;align-items:center;gap:6px}
   .card .c-link:hover{text-decoration:underline}
@@ -250,23 +253,23 @@
 <section id="about">
   <div class="wrap">
     <div class="eyebrow">What I do</div>
-    <h2>Quality, end to end.</h2>
-    <p class="sec-intro">I turn complex requirements into reliable, automated test coverage, so teams can release fast without breaking trust.</p>
+    <h2>Testing that keeps releases safe.</h2>
+    <p class="sec-intro">I catch problems before customers do, and wire the checks into CI/CD so every release ships with confidence.</p>
     <div class="do-grid">
       <div class="do-card reveal">
         <div class="do-ico">&lt;/&gt;</div>
-        <h3>Test Automation</h3>
-        <p>End-to-end and UI automation with Playwright &amp; Cypress, covering real user flows, SSO, and dynamic filters.</p>
-      </div>
-      <div class="do-card reveal">
-        <div class="do-ico">⇄</div>
-        <h3>API Validation</h3>
-        <p>REST API testing, contract checks, and mocked services using Java, AssertJ, MockServer &amp; Postman.</p>
+        <h3>End-to-End &amp; UI Testing</h3>
+        <p>Playwright and Cypress tests for real user flows, SSO, and dynamic filters, plus exploratory testing on high-risk areas.</p>
       </div>
       <div class="do-card reveal">
         <div class="do-ico">↻</div>
-        <h3>CI/CD &amp; Quality</h3>
-        <p>Automated pipelines with GitHub Actions, plus TDD and static analysis via SonarQube for confident releases.</p>
+        <h3>CI/CD Pipelines</h3>
+        <p>GitHub Actions pipelines that run the full test suite on every push, with Allure reporting for fast debugging.</p>
+      </div>
+      <div class="do-card reveal">
+        <div class="do-ico">⇄</div>
+        <h3>API &amp; Backend Testing</h3>
+        <p>REST API validation, contract checks, and mocked services with Java, AssertJ, MockServer, and Postman.</p>
       </div>
     </div>
   </div>
@@ -277,63 +280,84 @@
     <div class="port-head">
       <div>
         <div class="eyebrow">Portfolio</div>
-        <h2>Selected projects</h2>
+        <h2>Things I've built</h2>
       </div>
       <div class="slider-nav">
         <button class="s-arrow" id="prevBtn" aria-label="Previous projects">‹</button>
         <button class="s-arrow" id="nextBtn" aria-label="Next projects">›</button>
       </div>
     </div>
-    <p class="sec-intro">A running log of what I've been building, most recent first.</p>
+    <p class="sec-intro">Academic research and hands-on testing projects. Swipe to explore.</p>
 
     <div class="slider" id="slider">
       <div class="slider-track" id="track">
 
         <div class="card">
           <div class="c-top"><span class="c-date">Oct 2026 &ndash; Present</span><span class="c-badge">Master Thesis</span></div>
-          <h3>Optimizing Orthosis Settings with a Digital Twin</h3>
-          <div class="c-affil">FAU · Chair of Computer Science 12 (Hardware-Software Co-Design)</div>
-          <p>Connected a Java optimizer (Opt4J) to a Python server to search the best orthosis settings across 5 goals at once, returning a Pareto front, and built the setup for a digital twin so optimization can be tested without a real patient. Extending toward hardware robot control for orthosis and prosthesis, and exploring agentic algorithms.</p>
+          <h3>Orthosis Optimization with a Digital Twin</h3>
+          <div class="c-affil">FAU · Hardware-Software Co-Design (CS 12)</div>
+          <ul>
+            <li>Java optimizer (Opt4J) finds the best settings across 5 goals at once.</li>
+            <li>Built the digital-twin setup to test optimization without a real patient.</li>
+            <li>Extending toward hardware robot control and agentic algorithms.</li>
+          </ul>
           <a class="c-link" href="https://github.com/hafsaaqeel" target="_blank" rel="noopener">↗ View profile</a>
-        </div>
-
-        <div class="card">
-          <div class="c-top"><span class="c-date">August 2026</span><span class="c-badge">Embedded / IoT</span></div>
-          <h3>PEMSY</h3>
-          <div class="c-affil">FAU research project · with Fraunhofer IIS</div>
-          <p>Embedded firmware on Raspberry Pi Pico: bidirectional messaging over an RFM69HW sub-GHz radio and a long-range mioty LPWAN uplink for sensor data.</p>
-          <a class="c-link" href="https://github.com/hafsaaqeel/PEMSY" target="_blank" rel="noopener">↗ View repo</a>
         </div>
 
         <div class="card">
           <div class="c-top"><span class="c-date">Apr 2026 &ndash; Sep 2026</span><span class="c-badge">Research</span></div>
           <h3>Human-in-the-Loop GUI for Knee Orthosis</h3>
-          <div class="c-affil">FAU · Chair of Computer Science 12 (Hardware-Software Co-Design)</div>
-          <p>Built a touchscreen app in Python (Kivy/KivyMD) where patients give feedback on a knee orthosis, with accessible screens for users who are blind, low-vision, or have motor or cognitive impairments. A Flask REST server with SQLite stores feedback and calculates new settings, plus a secure admin dashboard and offline support so no data is lost.</p>
+          <div class="c-affil">FAU · Hardware-Software Co-Design (CS 12)</div>
+          <ul>
+            <li>Python (Kivy/KivyMD) touchscreen app for patient feedback.</li>
+            <li>Accessible screens for low-vision, motor, and cognitive needs.</li>
+            <li>Flask + SQLite backend with admin dashboard and offline support.</li>
+          </ul>
           <a class="c-link" href="https://github.com/hafsaaqeel/Human-in-the-Loop-Feedback-showcase" target="_blank" rel="noopener">↗ View repo</a>
+        </div>
+
+        <div class="card">
+          <div class="c-top"><span class="c-date">August 2026</span><span class="c-badge">Embedded / IoT</span></div>
+          <h3>PEMSY</h3>
+          <div class="c-affil">FAU research · with Fraunhofer IIS</div>
+          <ul>
+            <li>Embedded firmware on Raspberry Pi Pico.</li>
+            <li>Two-way messaging over an RFM69HW sub-GHz radio.</li>
+            <li>Long-range mioty LPWAN uplink for sensor data.</li>
+          </ul>
+          <a class="c-link" href="https://github.com/hafsaaqeel/PEMSY" target="_blank" rel="noopener">↗ View repo</a>
         </div>
 
         <div class="card">
           <div class="c-top"><span class="c-date">April 2025</span><span class="c-badge">Automation</span></div>
           <h3>UI &amp; API Automation with Cypress</h3>
-          <div class="c-affil">Personal implementation</div>
-          <p>Full-stack test framework covering UI + API layers, wired to GitHub Actions to run on every push.</p>
+          <div class="c-affil">Personal project</div>
+          <ul>
+            <li>Full-stack test framework covering UI and API layers.</li>
+            <li>Wired to GitHub Actions to run on every push.</li>
+          </ul>
           <a class="c-link" href="https://github.com/hafsaaqeel/Automation_UI_and_API" target="_blank" rel="noopener">↗ View repo</a>
         </div>
 
         <div class="card">
           <div class="c-top"><span class="c-date">April 2025</span><span class="c-badge">API Testing</span></div>
           <h3>API Testing Using Postman</h3>
-          <div class="c-affil">Personal implementation</div>
-          <p>Manual API test suite for a Books API: structured Postman collections plus an Excel test log tracking cases, expected results, and outcomes.</p>
+          <div class="c-affil">Personal project</div>
+          <ul>
+            <li>Structured Postman collections for a Books API.</li>
+            <li>Excel test log tracking cases, expected results, and outcomes.</li>
+          </ul>
           <a class="c-link" href="https://github.com/hafsaaqeel/API_Testing_Using_Postman" target="_blank" rel="noopener">↗ View repo</a>
         </div>
 
         <div class="card">
-          <div class="c-top"><span class="c-date">March 2024</span><span class="c-badge">In progress</span></div>
+          <div class="c-top"><span class="c-date">March 2024</span><span class="c-badge">Performance</span></div>
           <h3>JMeter Performance Testing</h3>
-          <div class="c-affil">Personal implementation</div>
-          <p>Performance and load test plans measuring throughput and response times under concurrent traffic.</p>
+          <div class="c-affil">Personal project</div>
+          <ul>
+            <li>Load test plans measuring throughput and response times.</li>
+            <li>Simulated concurrent traffic to find bottlenecks.</li>
+          </ul>
           <a class="c-link" href="https://github.com/hafsaaqeel/JMeter_Performance_Testing" target="_blank" rel="noopener">↗ View repo</a>
         </div>
 
@@ -438,20 +462,20 @@
         <div class="eyebrow">Certifications</div>
         <h2 style="margin-bottom:32px">Credentials</h2>
         <div class="item reveal">
-          <div class="i-date">In Progress · Expected March 2027</div>
-          <h4>ISTQB Certified Tester Foundation Level (CTFL 4.0)</h4>
-        </div>
-        <div class="item reveal">
-          <div class="i-date">In Progress · Expected January 2027</div>
-          <h4>AWS Certified Cloud Practitioner (CLF-C02)</h4>
-        </div>
-        <div class="item reveal">
-          <div class="i-date">In Progress · Expected December 2026</div>
+          <div class="i-date">Exam scheduled · 14 Dec 2026</div>
           <h4>Microsoft Certified: Azure Fundamentals (AZ-900)</h4>
         </div>
         <div class="item reveal">
-          <div class="i-date">Planned</div>
+          <div class="i-date">Exam scheduled · 11 Jan 2027</div>
           <h4>GitHub Foundations</h4>
+        </div>
+        <div class="item reveal">
+          <div class="i-date">Exam scheduled · 25 Jan 2027</div>
+          <h4>AWS Certified Cloud Practitioner (CLF-C02)</h4>
+        </div>
+        <div class="item reveal">
+          <div class="i-date">Exam scheduled · 2 Mar 2027</div>
+          <h4>ISTQB Certified Tester Foundation Level (CTFL 4.0)</h4>
         </div>
       </div>
     </div>
